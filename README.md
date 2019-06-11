@@ -2,5 +2,5 @@
 
 Some c# code that has a few features.
 - Glass: reads text from images.
-- Screencap:
-- VirtualMouse:
+- Screencap: capture windows by name and the entire screen
+- VirtualMouse: :I
