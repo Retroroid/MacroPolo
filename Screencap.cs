@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace MacroPolo {
     class Screencap {
+        // ---------------------------------------------------------------- //
         [StructLayout(LayoutKind.Sequential)]
         public struct Rect {
             public int left;
@@ -19,6 +20,7 @@ namespace MacroPolo {
             public int right;
             public int bottom;
         }
+        // ---------------------------------------------------------------- //
         [DllImport("user32.dll")]
         private static extern int SetForegroundWindow(IntPtr hWnd);
         private const int SW_RESTORE = 9;
@@ -26,6 +28,7 @@ namespace MacroPolo {
         private static extern IntPtr ShowWindow(IntPtr hWnd, int nCmdShow);
         [DllImport("user32.dll")]
         public static extern IntPtr GetWindowRect(IntPtr hWnd, ref Rect rect);
+        // ---------------------------------------------------------------- //
         public static Bitmap CaptureApplication(string procName) {
             Process proc;
             // Cater for cases when the process can't be located.
@@ -58,7 +61,7 @@ namespace MacroPolo {
                                                    CopyPixelOperation.SourceCopy);
             return bmp;
         }
-
+        // ---------------------------------------------------------------- //
         public static Bitmap CaptureScreen() {
             Rectangle bounds = Screen.GetBounds(Point.Empty);
             using (Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height)) {
@@ -68,5 +71,6 @@ namespace MacroPolo {
                 return bitmap;
             }
         }
+        // ---------------------------------------------------------------- //
     }
 }

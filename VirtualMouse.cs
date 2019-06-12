@@ -48,12 +48,8 @@ namespace MacroPolo {
         }
         // ---------------------------------------------------------------- //
         // ---------------------------------------------------------------- //
-        // ---------------------------------------------------------------- //
-        public static int[] GetPos() {
-            int[] XY = new int[2];
-            XY[0] = Cursor.Position.X; XY[1] = Cursor.Position.Y;
-            return XY;
-        }
+        public static int PosX() { return Cursor.Position.X; }
+        public static int PosY() { return Cursor.Position.Y; }
         // ---------------------------------------------------------------- //
         public static void Move(int xDelta, int yDelta) {
             mouse_event(MOUSEEVENTF_MOVE, xDelta, yDelta, 0, 0);
