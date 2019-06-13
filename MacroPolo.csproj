@@ -58,7 +58,6 @@
     <Compile Include="Imagine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screencap.cs" />
     <Compile Include="VirtualMouse.cs" />
   </ItemGroup>
   <ItemGroup>
