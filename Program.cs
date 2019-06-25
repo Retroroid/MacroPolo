@@ -12,9 +12,11 @@ namespace MacroPolo {
     class Program {
         static void Main(string[] args) {
             // string m = @"C:\\Users\\lucask\\testmat\\";
+            //string path = @"C:\\Windows\\System32\\mspaint.exe";
+            //Ignition.Ignite(path);
             // ---------------------------------------------------------------- //
-            string path = @"C:\\Windows\\System32\\mspaint.exe";
-            Ignition.Ignite(path);
+            Thread.Sleep(5000);
+            VirtualBoard.Send(VirtualBoard.ScanCodeShort.F5);
         }
     }
 }
